@@ -1,0 +1,16 @@
+import random
+import string
+
+# Defina os caracteres permitidos
+min_chars = string.ascii_lowercase
+max_chars = string.ascii_uppercase
+num_chars = string.digits
+special_chars = '[]{}()*#;/,-_%'
+
+# Solicite ao usuário o tamanho da senha
+length = int(input('Digite o tamanho da senha: '))
+
+# Crie a senha misturando todos os tipos de caracteres
+all_chars = min_chars + max_chars + num_chars + special_chars
+password = ''.join(random.sample(all_chars, length))
+print('Senha gerada:', password)
